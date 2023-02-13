@@ -1,20 +1,16 @@
 <template>
 <swiper :slidesPerView="1" :spaceBetween="30" :freeMode="true" :pagination="{
-            clickable: true,
-          }" :modules="modules" class="mySwiper">
-    <swiper-slide v-for="text in texts" :key="text">
-        <div class="text">
-            <p class="black--text">
-                {{ text }}
-            </p>
-        </div>
+        clickable: true,
+      }" :modules="modules" >
+    <swiper-slide v-for="image in images" :key="image.id">
+        <!-- <v-img :src="image.image"> -->
+            <p class="mt-5 mx-5">{{ image.name }}</p>
+        <!-- </v-img> -->
     </swiper-slide>
 
 </swiper>
 </template>
 
-    
-    
 <script>
 // Import Swiper Vue.js components
 import {
@@ -31,8 +27,27 @@ import {
 } from 'swiper';
 
 export default {
-    props:['texts'],
 
+    data() {
+        return {
+            images: [{
+                    id: 1,
+                    name: 'room1',
+                    image: 'https://i.ibb.co/kg6nZ25/qui-nguyen-gi-L2f-HNr3-Lc-unsplash.jpg'
+                },
+                {
+                    id: 2,
+                    name: 'room2',
+                    image: 'https://i.ibb.co/kg6nZ25/qui-nguyen-gi-L2f-HNr3-Lc-unsplash.jpg'
+                },
+                {
+                    id: 3,
+                    name: 'room3',
+                    image: 'https://i.ibb.co/kg6nZ25/qui-nguyen-gi-L2f-HNr3-Lc-unsplash.jpg'
+                },
+            ]
+        }
+    },
     components: {
         Swiper,
         SwiperSlide,
@@ -44,8 +59,7 @@ export default {
     },
 };
 </script>
-    
-    
+
 <style scoped>
 .swiper {
     width: 100%;
