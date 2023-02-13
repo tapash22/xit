@@ -11,7 +11,7 @@
                         </p>
                     </v-card-text>
                     <v-card-actions class="d-flex justify-start ">
-                        <v-btn v-for="link in team.links" :key="link.id" small>
+                        <v-btn v-for="link in team.links" :key="link.id" >
                             <a  :href="link.link" class="text-decoration-none pa-0 black--text">
                             <v-icon color="gray" size="20">
                                 {{ link.icon }}

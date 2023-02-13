@@ -1,11 +1,10 @@
 <template>
 <div class="home">
-
         <TheNavigation />
         <v-row class="d-flex justify-center my-5">
             <v-col cols="10" sm="10" md="6" lg="6" xl="6">
                 <v-sheet class="mt-10" elevation="0" color="transparent">
-                    <h2 class="text-h3 font-weight-bold text-uppercase white--text">
+                    <h2 class="text-h3 font-weight-bold text-uppercase white--text text-center">
                         {{ text }}
                     </h2>
                     <p class="text-body-1 white--text text-center my-2">

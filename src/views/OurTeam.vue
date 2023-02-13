@@ -1,8 +1,8 @@
 <template>
     <div class="team">
         <v-container>
-        <v-row class="d-flex justify-center pa-12">
-            <v-col cols="6" sm="6" md="3" lg="3" xl="3" v-for="team in teams" :key="team.id" class="pa-2">
+        <v-row class="d-flex justify-center pa-12 ">
+            <v-col cols="12" sm="12" md="3" lg="3" xl="3" v-for="team in teams" :key="team.id" class="pa-0 pa-sm-2 pa-md-2 my-2">
             <TeamCard :team="team" />
             </v-col>
         </v-row>
